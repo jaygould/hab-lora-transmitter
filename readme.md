@@ -2,6 +2,12 @@
 
 Program for loading on to an ESP32 for transmitting telemetry data from a high altitude balloon payload.
 
+## Related repos
+
+- [HAB API](https://github.com/jaygould/hab-api)
+- [HAB React Native app](https://github.com/jaygould/hab-app)
+- [HAB LoRaWAN transmitter](https://github.com/jaygould/hab-lorawan-transmitter)
+
 ## Components 
 
 Uses an ESP32 microcontroller with various components wired in to transmit telemetry and sensor data to the ground using LoRa radio. Components include:
