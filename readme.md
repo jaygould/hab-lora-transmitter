@@ -1,6 +1,6 @@
 # HAB LoRa Transmitter
 
-Program for loading on to an ESP32 for use on a high altitude balloon payload.
+Program for loading on to an ESP32 for transmitting telemetry data from a high altitude balloon payload.
 
 ## Components 
 

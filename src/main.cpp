@@ -12,7 +12,6 @@
 // SD
 SPIClass spi = SPIClass(VSPI);
 
-
 // Sleep
 #define uS_TO_S_FACTOR 1000000
 #define TIME_TO_SLEEP  20
