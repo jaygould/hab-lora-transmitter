@@ -70,8 +70,6 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
-
-
   // Sleep - config
   if(enableSleepRunMode) {
     esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
@@ -109,10 +107,8 @@ void setup() {
     while (true);
   }
 
-  // SD card - must go at the bottom of the setup for some reason, otherwise get the error 
+  // SD card - must go at the bottom of the setup() for some reason, otherwise the card doesn't mount 
   spi.begin(18, 19, 23, 5);
-  // digitalWrite(5, LOW);
-  // digitalWrite(4, HIGH);
   if(!SD.begin(5, spi)){
     Serial.println("Card Mount Failed");
     // return;
@@ -138,10 +134,6 @@ void setup() {
 
   uint64_t cardSize = SD.cardSize() / (1024 * 1024);
   Serial.printf("SD Card Size: %lluMB\n", cardSize);
-
-  // digitalWrite(5, HIGH);
-  // digitalWrite(4, LOW);
-
 }
 
 void loop() {
@@ -200,7 +192,6 @@ void loop() {
       } else {
         sprintf(timeString, "%s", "00:00:00");
       }
-
     }
 
     // TODO: maybe send byte array instead of string? depends what LoRa-gateway can track
