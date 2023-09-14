@@ -266,4 +266,7 @@ void appendFile(fs::FS &fs, const char * path, const char * message){
     Serial.println("Append failed");
   }
   file.close();
+
+  // ! needed?
+  return;
 }
